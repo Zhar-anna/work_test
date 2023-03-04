@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="container">
+    <div class="container justify-content-center align-items-center">
       <div class="row justify-content-start">
           <aside class="col-3 bg-white">
             <img src="./images/Logo Work5.png" class="rounded" alt="work5">
              <nav>
               <ul class="list-group">
-                  <li class="list-group-item disabled"><img class="logo" src="./images/дом.png">Главная</li>
+                  <li class="list-group-item disabled main"><img class="logo" src="./images/дом.png">Главная</li>
                   <li class="list-group-item disabled"><img class="logo" src="./images/тележка.png">Мои магазины</li>
                   <li class="list-group-item disabled"><img class="logo" src="./images/мегафон.png">Промоматериалы</li>
                   <li class="list-group-item disabled"><img class="logo" src="./images/диаграмма.png">Статистика</li>
@@ -28,27 +28,38 @@
             </nav>
           </aside>
           <main class="col-9">
+            <div class="hat flex">
+              <div class="header">Главная > Мои магазины</div>
+              <div class="flex top-16">
+                <img class="email" src="./images/envelope.png">
+                <p class="maxim"><img class="max_photo" src="./images/фото.png"><span>Максим Добжанский</span>
+                </p>
+              </div>
+            </div>
+            
+            <button type="button" id="big" class="btn btn-success"><img class="plus" src="./images/+.png">Создать свой магазин</button>
+            <h2>Управление магазинами</h2>
             <table class="table align-items-center">
                 <thead>
                     <tr>
-                        <th scope="col-1">№</th>
-                        <th scope="col-3">Название</th>
-                        <th scope="col-3">Адрес</th>
-                        <th scope="col-6">Действие</th>
+                        <th class="headtable col-1" scope="col-1">№</th>
+                        <th class="headtable col-2" scope="col-3">Название</th>
+                        <th class="headtable col-3t" scope="col-3">Адрес</th>
+                        <th class="headtable col-4" scope="col-6">Действие</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">12345</th>
-                        <td>Дипломная работа</td>
+                    <tr class="td">
+                        <th class="onetwo" scope="row">12345</th>
+                        <td >Дипломная работа</td>
                         <td>http://www.work5.ru/services</td>
-                        <td><button></button><button></button></td>
+                        <td><button type="button" class="btn btn-success"><img class="symbol" src="./images/карандаш 1.png">Редактировать</button><button type="button" class="btn btn-secondary"><img class="symbol" src="./images/cansel.png">Редактировать</button ></td>
                     </tr>
                     <tr>
-                        <th scope="row">12345</th>
-                        <td>Дипломная работа</td>
-                        <td>http://www.work5.ru/services</td>
-                        <td><button></button><button></button></td>
+                        <th class="onetwo down" scope="row">12345</th>
+                        <td class="down">Дипломная работа</td>
+                        <td class="down">http://www.work5.ru/services</td>
+                        <td class="down"><button type="button" class="btn btn-success"><img class="symbol" src="./images/карандаш 1.png">Редактировать</button><button type="button" class="btn btn-secondary"><img class="symbol" src="./images/cansel.png">Редактировать</button></td>
                     </tr>
                 </tbody>
             </table>
