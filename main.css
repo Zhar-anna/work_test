@@ -1,4 +1,3 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
 
 .container {
     max-height: 787px;
@@ -40,6 +39,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 21px;
+color: #6c757d;
 }
 
 .logo {
@@ -60,9 +60,9 @@ line-height: 21px;
     margin-top: 22px;
     margin-bottom: 64px;
     font-weight: 500;
-font-size: 12px;
-line-height: 21px;
-color: #656565;
+    font-size: 12px;
+    line-height: 21px;
+    color: #656565;
 }
 
 .table {
@@ -84,23 +84,23 @@ color: #656565;
 .col-4 {
     display: flex;
     width: 30%;
-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 h2 {
     margin-top: 35.5px;
     margin-bottom: 25.5px;
     font-weight: 500;
-font-size: 20px;
-line-height: 21px;
-color: #343434;
+    font-size: 20px;
+    line-height: 21px;
+    color: #343434;
 }
 
 .headtable {
     padding: 0 0 25.5px 0;
     border-style: none;
     font-weight: 500;
-font-size: 14px;
-line-height: 21px;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .td {
@@ -153,9 +153,6 @@ line-height: 21px;
     margin-right: 12px;
 }
 
-.flex {
-    display: flex;
-}
 
 .hat {
     justify-content: space-between;
@@ -177,10 +174,10 @@ span {
     margin-top: 22px;
     margin-bottom: 22px;
     font-weight: 500;
-font-size: 14px;
-line-height: 21px;
-color: #7D7D7D;
-margin-left: 12px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7D7D7D;
+    margin-left: 12px;
 }
 
 .maxim {
@@ -188,9 +185,9 @@ margin-left: 12px;
     height: 65px;
     margin-left: 16px;
     padding-left: 17px;
-padding-top: 12px;
-padding-right: 34px;
-box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
+    padding-top: 12px;
+    padding-right: 34px;
+    box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
 }
 
 .max_photo {
@@ -198,43 +195,27 @@ box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
     border-radius: 50%;
 }
 
-
+.cursor {
+    cursor: pointer;
+}
 .modall {
     display: none;
-    position: fixed; /* фиксированное положение */
-    top: 0;
-    right: 0;
+    position: fixed;
+    width: 617px;
+    top: 20%;
+    right: 50%;
     bottom: 0;
-    left: 0;
+    left: 15%;
     z-index: 1050;
-    /* opacity: 0; по умолчанию модальное окно прозрачно */
     -webkit-transition: opacity 200ms ease-in; 
     -moz-transition: opacity 200ms ease-in;
-    transition: opacity 200ms ease-in; /* анимация перехода */
-    pointer-events: none; /* элемент невидим для событий мыши */
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
     margin: 0;
     padding: 0;
 
 }
-/* при отображении модального окно */
-/* .modal:target {
-    /* opacity: 1; делаем окно видимым */
-	  /* pointer-events: auto; /* элемент видим для событий мыши */
-    /* overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
-/* } */ 
-/* ширина модального окна и его отступы от экрана */
-.modal-dialog {
-    position: relative;
-    width: auto;
-    margin: 10px;
-}
-@media (min-width: 576px) {
-  .modal-dialog {
-      max-width: 500px;
-      margin: 30px auto; /* для отображения модального окна по центру */
-  }
-}
-/* свойства для блока, содержащего контент модального окна */ 
+
 .modal-content {
     position: relative;
     display: -webkit-box;
@@ -259,7 +240,7 @@ box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
       box-shadow: 0 5px 15px rgba(0,0,0,.5);
   }
 }
-/* свойства для заголовка модального окна */
+
 .modal-header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -283,7 +264,7 @@ box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
     font-size: 1.25rem;
     font-weight: 500;
 }
-/* свойства для кнопки "Закрыть" */
+
 .close {
     float: right;
     font-family: sans-serif;
@@ -295,20 +276,67 @@ box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
     opacity: .5;
     text-decoration: none;
 }
-/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+
 .close:focus, .close:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
     opacity: .75;
 }
-/* свойства для блока, содержащего основное содержимое окна */
+
 .modal-body {
   position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     overflow: auto;
+    justify-content: space-between;
+}
+
+.form-control,
+.input-group-text {
+    height: 36px;
+}
+.input-group-text {
+    background-color: #6666CC;
+    color: white;
+}
+.form-control {
+    margin-top: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.modal_menu {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #343434;
+
+}
+
+
+.dropdown-toggle {
+    background-color: white;
+    color: #7C7C7C;
+    font-weight: 400;
+font-size: 12px;
+line-height: 21px;
+}
+
+.warning {
+    width: 488px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #7D7D7D;
+}
+
+.warning-image {
+    height: 52px;
+    width: auto;
+    margin: 0 16.15px 43.49px 32px;
 }

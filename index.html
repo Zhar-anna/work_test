@@ -9,18 +9,50 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <div  class="modall" tabindex="-1">
+     <script>
+         function openFunction() {
+      document.getElementById("modal").style.display = "block";
+   }
+   function closeFunction() {
+    document.getElementById("modal").style.display = "none";
+   }
+      </script> 
+    <div id="modal" class="modall" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Создать магазин</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" onclick="closeModal();"></button>
+            <button onclick="closeFunction()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
           <div class="modal-body">
-            <p>Здесь идет основной текст модального окна</p>
+            <div class="d-flex justify-content-between">
+              <div class="modal_menu">Шаблон
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Стандартный
+                </button>
+              </div>
+            </div>
+            <div class="modal_menu">Цветовая схема
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Классическая
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+          <p class="domen modal_menu">Домен</p>
+            <div class="input-group mb-3 d-flex">
+              <input type="text" class="form-control" placeholder="Например: ivangrozniy" aria-label="Например: ivangrozniy" aria-describedby="basic-addon2">
+              <span class="input-group-text" id="basic-addon2">.work5.ru</span>
+            </div>
+          </div>
+          <div class="d-flex">
+            <img class="warning-image" src="./images/warning.png">
+            <p class="warning">В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по ссылке</p>
+          </div>
+          <div class="modal-footer justify-content-start d-flex">
+            <button onclick="closeFunction()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
             <button type="button" class="btn btn-success">Создать</button>
           </div>
         </div>
@@ -33,8 +65,7 @@
              <nav>
               <ul class="list-group">
                   <li class="list-group-item disabled main"><img class="logo" src="./images/дом.png">Главная</li>
-                  <li class="list-group-item disabled" ><img class="logo" src="./images/тележка.png">Мои магазины</li>
-                  <button class="x" onclick="openModal()">хуй</button>
+                  <li class="list-group-item" ><img class="logo" src="./images/тележка.png">Мои магазины</li>
                   <li class="list-group-item disabled"><img class="logo" src="./images/мегафон.png">Промоматериалы</li>
                   <li class="list-group-item disabled"><img class="logo" src="./images/диаграмма.png">Статистика</li>
                   <li class="list-group-item disabled"><img class="logo" src="./images/кошелек.png">Баланс</li>
@@ -48,14 +79,14 @@
           <main class="col-9">
             <div class="hat d-flex">
               <div class="header">Главная > Мои магазины</div>
-              <div class="flex top-16">
+              <div class="d-flex top-16">
                 <img class="email" src="./images/envelope.png">
                 <p class="maxim"><img class="max_photo" src="./images/фото.png"><span>Максим Добжанский</span>
                 </p>
               </div>
             </div>
             
-            <button type="button" id="big" class="btn btn-success"><img class="plus" src="./images/+.png">Создать свой магазин</button>
+            <button onclick="openFunction()" type="button" id="big" class="btn btn-success"><img class="plus" src="./images/+.png">Создать свой магазин</button>
             <h2>Управление магазинами</h2>
             <table class="table align-items-center">
                 <thead>
@@ -71,7 +102,7 @@
                         <th class="onetwo" scope="row">12345</th>
                         <td >Дипломная работа</td>
                         <td>http://www.work5.ru/services</td>
-                        <td><button type="button" class="btn btn-success"><img class="symbol" src="./images/карандаш 1.png">Редактировать</button><button type="button" class="btn btn-secondary"><img class="symbol" src="./images/cansel.png">Редактировать</button ></td>
+                        <td class="d-flex"><button type="button" class="btn btn-success"><img class="symbol" src="./images/карандаш 1.png">Редактировать</button><button type="button" class="btn btn-secondary"><img class="symbol" src="./images/cansel.png">Редактировать</button ></td>
                     </tr>
                     <tr>
                         <th class="onetwo down" scope="row">12345</th>
@@ -84,16 +115,5 @@
           </main>
       </div>
     </div>
-      <script>
-      // document.getElementsByClassName("modall")[0].style.display = 'block'
-        // const openModal = () => {
-        // const mo = document.getElementsByClassName("modall")[0];
-        //   mo.stylе.displаy = "block";
-        // }
-        // const closeModal = () => {
-        //   const mo = document.querySelector(".modall");
-        //   mo.stylе.displаy = "none";
-        // }
-      </script>
   </body>
 </html>
